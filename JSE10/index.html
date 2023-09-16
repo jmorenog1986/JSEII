@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+
+    
+
+    <input id="" type="text" value="" placeholder="nombre"/>
+    <input id="" type="text" value="" placeholder="teléfono"/>
+    <input id="" type="text" value="" placeholder="email"/>
+    <button onclick="agregar()">Click</button>
+
+
+    <script>
+        
+        let contacts = [{
+            name: "Maxwell Wright",
+            phone: "(0191) 719 6495",
+            email: "egestas@nonummyac.co.uk"
+            }, {
+            name: "Raja Villarreal",
+            phone: "0866 398 2895",
+            email: "posuere@sed.com"
+            }, {
+            name: "Helen Richards",
+            phone: "0800 1111",
+            email: "libero@vallis.edu"
+            }];
+       
+        function agregar(){
+            let input=document.getElementsByTagName("input");
+            let nDato={
+                name:input[0].value,
+                phone:input[1].value ,
+                email:input[2].value 
+                }
+            contacts.push(nDato);
+            console.log(contacts);
+        }
+
+     </script>
+</body>
+</html>
