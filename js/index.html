@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input id="documento" type="number" value="777" oninput="capturaData()">
+    <input id="nombre" type="text" oninput="capturaData()">
+    <input id="apellido" type="text" oninput="capturaData()">
+    <input id="email" type="email" oninput="capturaData()">
+    
+    <input type="button" value="captura" onclick="capturaData()">
+    <button onclick="verData()">Ver</button>
+    
+
+    <div id="muestra">
+        documento<span id="span1"></span><br>
+        nombre<span id="span2"></span><br>
+        apellido<span id="span3"></span><br>
+        email<span id="span4"></span><br>
+    </div>
+    
+    <script src="js/ejemplo.js">      
+    </script>
+</body>
+</html>
