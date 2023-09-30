@@ -32,25 +32,30 @@ do{
         contadorPersonas++;
 
         let s=prompt("1) para hombre. 2) para mujer.");
-        if(s=="1"){
-            hombres++;
-            sumaH+=edad;
-            console.log(sumaH);
-            console.log(hombres);
-            console.log(sumaH/hombres)
-            proHombre=sumaH/hombres;
-        }else if(s=="2"){
-            mujeres++;
-            sumaM+=edad;
-            proMujer=sumaM/mujeres;
+        switch(s){
+            case "1":
+                hombres++;
+                sumaH+=edad;
+                proHombre=sumaH/hombres;
+                break;
+            case "2":
+                mujeres++;
+                sumaM+=edad;
+                proMujer=sumaM/mujeres;
+                break;
+
         }
 
-        if(edad<edadJoven){
+             if(edad<edadJoven){
             edadJoven=edad;
         }
     }
 
-}while(edad!=0);
+    if(edad==0){
+        break;
+    }
+
+}while(true);
 
 let respuesta=`¿Cuántas personas asistieron a la fiesta? ${contadorPersonas} <br>`;
     respuesta+=`¿Cuántos hombres y cuantas mujeres? Hombres ${hombres} Muejeres ${mujeres} <br> `;
